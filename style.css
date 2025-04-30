@@ -1,0 +1,61 @@
+/* Reset de margens e preenchimentos */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para header e footer */
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Grid container principal */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo dos itens */
+.grid-item {
+    border: 5px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+/* Estilo para as imagens dentro dos itens */
+.grid-item img {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Hover nos itens */
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+/* Classe para itens grandes */
+.large {
+    grid-column: span 2;
+}
+
+/* Responsividade para telas até 1024px */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Responsividade para telas até 720px */
+@media (max-width: 720px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
